@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { POKEMONS } from '../mock-pokemon-list';
 import { Pokemon } from '../pokemon';
 import { CommonModule } from '@angular/common';
@@ -15,7 +15,7 @@ export class DetailPokemonComponent implements OnInit {
   pokemonList: Pokemon[];
   pokemon: Pokemon | undefined;
 
-  constructor(private route: ActivatedRoute) { } // injecte dans le componsant le service route (activate route) et le rend disponible
+  constructor(private route: ActivatedRoute, private router: Router) { } // injecte dans le componsant le service route (activate route) et le rend disponible
 
   ngOnInit() { 
     this.pokemonList = POKEMONS;
@@ -26,8 +26,11 @@ export class DetailPokemonComponent implements OnInit {
 
     if (pokemonId){// si mon id est trouvé dans l'url, j'attache le pokemon qui correspond id a pokemonId
        this.pokemon = this.pokemonList.find(pokemon => pokemon.id == +pokemonId)
-    }
-    console.log(this.pokemon)
+    }    
+  }
+
+ goToPokemonList(){
+  this.router.navigate(['/pokemons'])
   }
 
 }
