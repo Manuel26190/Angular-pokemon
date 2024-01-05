@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HighlightDirective } from './highlight.directive';
 import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
 import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
-
+import { ErrorComponent } from './error/error.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +12,8 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
             RouterOutlet, 
             HighlightDirective,            
             ListPokemonComponent,
-            DetailPokemonComponent
+            DetailPokemonComponent,
+            ErrorComponent
           ],
   templateUrl: 'app.component.html',  
 })
