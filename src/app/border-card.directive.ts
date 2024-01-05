@@ -25,7 +25,7 @@ export class BorderCardDirective {
 
   @HostListener('mouseenter') onMouseEnter() {
     this.setBorder("#009688");  
-    //this.setHeight(this.borderHeight)     
+    //this.setHeight(this.borderHeight)         
   }
 
   @HostListener('mouseleave') onMouseLeave() {

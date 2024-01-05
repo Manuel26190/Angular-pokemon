@@ -14,17 +14,6 @@ import { CommonModule } from '@angular/common';
 export class ListPokemonComponent {
 
   pokemonList: Pokemon[] = POKEMONS;
-  pokemonSelected: Pokemon | undefined;
-
-  selectPokemon(pokemonId: string) {
-    const pokemon: Pokemon | undefined = this.pokemonList.find(pokemon => pokemon.id == +pokemonId);
-    if (pokemon) {
-      console.log(`Vous avez demandé le pokemon ${pokemon.name}`);
-      this.pokemonSelected = pokemon;
-    } else {
-      console.log(`vous avez demandé un pokemon qui n'éxiste pas.`);
-      this.pokemonSelected = pokemon;
-    }
-  }
+  pokemonSelected: Pokemon | undefined; 
 
 }
