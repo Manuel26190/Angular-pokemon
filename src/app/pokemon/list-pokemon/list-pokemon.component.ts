@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list-pokemon',
-  standalone: true,
-  imports: [BorderCardDirective, PokemonTypeColorPipe, CommonModule],
+  standalone: false,
+  //imports: [],
   templateUrl: './list-pokemon.component.html'  
 })
 export class ListPokemonComponent {

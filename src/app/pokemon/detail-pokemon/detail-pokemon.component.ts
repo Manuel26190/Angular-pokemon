@@ -6,8 +6,7 @@ import { CommonModule } from '@angular/common';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 @Component({
   selector: 'app-detail-pokemon',
-  standalone: true,
-  imports: [CommonModule, PokemonTypeColorPipe],
+  standalone: false,  
   templateUrl: './detail-pokemon.component.html'  
 })
 export class DetailPokemonComponent implements OnInit {

@@ -2,7 +2,7 @@ import { style } from '@angular/animations';
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  standalone: true,
+  standalone: false,
   selector: '[addBorderCard]'  
 })
 export class BorderCardDirective {
