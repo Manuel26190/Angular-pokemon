@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonModule } from './pokemon/pokemon.module';
-//import { PokemonService } from './pokemon/pokemon.service';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+
+
 @NgModule({
-  declarations: [],
+  declarations: [
+        
+  ],
   imports: [
     CommonModule,
-    PokemonModule,    
+    FormsModule,
+    FormsModule, 
+    PokemonModule    
   ],
-  //providers: [PokemonService]
+  providers: [],
+  bootstrap: [AppComponent]
+  
 })
 export class AppModuleTsModule { }
